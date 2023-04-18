@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dotech_learn/static/css/main.7064deb2.css",
-    "main.js": "/dotech_learn/static/js/main.ca4ebf40.js",
+    "main.js": "/dotech_learn/static/js/main.cff6aa09.js",
     "index.html": "/dotech_learn/index.html",
     "main.7064deb2.css.map": "/dotech_learn/static/css/main.7064deb2.css.map",
-    "main.ca4ebf40.js.map": "/dotech_learn/static/js/main.ca4ebf40.js.map"
+    "main.cff6aa09.js.map": "/dotech_learn/static/js/main.cff6aa09.js.map"
   },
   "entrypoints": [
     "static/css/main.7064deb2.css",
-    "static/js/main.ca4ebf40.js"
+    "static/js/main.cff6aa09.js"
   ]
 }
