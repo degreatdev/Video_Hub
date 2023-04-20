@@ -15,8 +15,8 @@ const Navbar = () =>  (
 
         <Link to="/" style={{ display: 'flex', alignItems: 'center'}}>
           <img src={logo} alt='logo' height={45} /> 
-          <Typography variant='h5' color='#fff' ml='15px' fontWeight='bold'> 
-            Video Hub
+          <Typography variant={{sm: 'h5'}} color='#fff' ml='9px' fontWeight='bold' fontSize={{xs: '14px'}}> 
+            V-Hub
           </Typography>
         </Link>
 

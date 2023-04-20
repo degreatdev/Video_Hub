@@ -14,6 +14,11 @@ const Feed = () => {
         .then((data) => setVideos(data.items))
     }, [selectedCategory]);
 
+    //Activate scroll to the top of the page
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
+
     return (
 
     <Stack sx={{ flexDirection: { sx: "column", md: "row"} }} >
@@ -30,7 +35,7 @@ const Feed = () => {
           </Typography> */}
       </Box>
 
-      <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2}} ml={{md:'20px', sm:'35px'}} mt='10px' className='scroll-btn'>
+      <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2}} ml={{md:'20px', sm:'35px', xs: '5px'}} mt='10px'>
         <Typography variant='h4' fontWeight='bold' mb={2} sx={{ color: 'white'}}>
           {selectedCategory} <span style={{ color: '#F31503'}}>videos</span>
         </Typography>

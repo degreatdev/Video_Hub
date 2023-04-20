@@ -23,6 +23,11 @@ const VideoDetail = () => {
       .then((data) => setVideos(data.items));
     },[id]);
 
+    //Activate scroll to the top of the page
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
+
     if (!videoDetail?.snippet) return <Loader/>;
 
     const { snippet: {title, channelId, channelTitle}, statistics: {viewCount, likeCount} } = videoDetail;
@@ -30,7 +35,8 @@ const VideoDetail = () => {
 
   return (
     <Box minHeight='95vh'>
-      <Stack direction={{ xs: 'column', md: 'row'}}>
+      
+      <Stack direction={{ xs: 'column', sm:'column', md: 'row'}}>
         <Box flex={1}>
             <Box sx={{ width: '100%', position: 'sticky',top: '86px'}}>
               <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`}
@@ -41,19 +47,19 @@ const VideoDetail = () => {
 
               <Stack direction='row' justifyContent='space-between' sx={{ color: '#fff' }} py={1} px={2}>
                 <Link to={`/channel/${channelId}`}>
-                  <Typography variant={{ sm:'subtitle1', md: 'h5'}} color='#fff'>
+                  <Typography variant={{ sm:'subtitle1', xs:'subtitle2', md: 'h5'}} color='#fff'>
                     {channelTitle}
                     <CheckCircle sx={{ fontSize: '15px', color: 'gray', ml: '8px'}}/>
                   </Typography>
                 </Link>
 
 
-                <Stack direction='row' gap='20px' alignItems='center'>
-                  <Typography variant='body1' sx={{ opacity: '0.7'}}>
+                <Stack direction='row' gap={{md:'20px', xs: '5px', sm:'25px'}} alignItems='center'>
+                  <Typography variant='body2' sx={{ opacity: '0.7'}}>
                     {parseInt(viewCount).toLocaleString()} Views
                   </Typography>
 
-                  <Typography variant='body1' sx={{ opacity: '0.7'}}>
+                  <Typography variant='body2' sx={{ opacity: '0.7'}}>
                     {parseInt(likeCount).toLocaleString()} Likes
                   </Typography>
                 </Stack>
@@ -62,8 +68,12 @@ const VideoDetail = () => {
         </Box>
 
         <Box px={2} py={{md: 1, xs: 5}} justifyContent='center' alignItems='center'>
-          <Videos videos={videos} direction={{md:'column'}}/>
-      </Box>
+          <Typography variant='h5' fontWeight='bold' mb={2} sx={{ color: 'white'}}>
+          Similar <span style={{ color: '#F31503'}}>Videos:</span> 
+          </Typography>
+          <Videos videos={videos} direction={{md:'column'}} mr='0px'/>
+          
+        </Box>
       </Stack>
 
     </Box>

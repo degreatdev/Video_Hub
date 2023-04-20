@@ -19,7 +19,12 @@ const ChannelDetail = () => {
 
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`)
     .then((data) => setVideos(data?.items));
-  }, [id])
+  }, [id]);
+
+  //Activate scroll to the top of the page
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
 
   return (
     <Box minHeight="95vh">
@@ -28,12 +33,13 @@ const ChannelDetail = () => {
         zIndex: 10, height: '300px'
       }}
         />
-
+        
+        
         <ChannelCard channelDetail={channelDetail} marginTop='-109px'/>
       </Box>
 
       <Box display='flex' p='2'>
-        <Box sx={{ mr:{ sm: '120px'}}}/>
+        <Box sx={{ mr:{ sm: '50px', md: '140px', xs:'5px'}}}/>
           <Videos videos={videos}/>
 
       </Box>
