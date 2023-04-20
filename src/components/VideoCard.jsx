@@ -22,7 +22,7 @@ const VideoCard = ({video: { id: {videoId}, snippet }}) => {
       <CardContent sx={{ backgroundColor: '#1e1e1e', height: '106px'}}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <Typography variant='subtitle1' fontWeight="bold" color="#FFF" fontSize= '18px'>
-          {snippet?.title.slice(0,75) || demoVideoTitle.slice(0,60)} <span style={{ color: '#F31503'}}> Click To Watch..........</span>
+          {snippet?.title.slice(0,70) || demoVideoTitle.slice(0,60)} <span style={{ color: '#F31503'}}> Click To Watch....</span>
         </Typography>
         </Link>
 

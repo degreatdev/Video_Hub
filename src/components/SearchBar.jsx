@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Paper, IconButton } from '@mui/material';
-import {Height, Search} from '@mui/icons-material';
+import {Search} from '@mui/icons-material';
 
 const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -28,18 +28,23 @@ const SearchBar = () => {
         pl : 2,
         boxShadow: 'none',
         mr: { sm: 5},
+        width: {xs: '210px', md: '450px', sm:'450px'},
+        height: {xs: '44px', md: '40px'},
+        mt:{xs: '5px'}
+
         
     }}
     >
+
         <input 
         className= "search-bar"
         placeholder='Search...'
         value= {searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-
+        
         />
 
-        <IconButton type="submit" sx={{ p:'10px', color: 'red'}}>
+        <IconButton type="submit" sx={{ p:'10px', color: 'red', ml: {xs: '150px', md: '380px', sm:'380px'}, mt: '-45px'}}>
             <Search />
         </IconButton>
     </Paper>
