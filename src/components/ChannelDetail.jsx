@@ -10,7 +10,8 @@ const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null)
 
   const {id} = useParams();
-  console.log(channelDetail, videos)
+
+  // console.log(channelDetail);  CHECKS THE PROPERTIES OF VIDEO-DETAILS
 
   useEffect(() => {
     fetchFromAPI(`channels?part=snippet&id=${id}`)
@@ -21,9 +22,23 @@ const ChannelDetail = () => {
   }, [id])
 
   return (
-    <div>
-      {id}
-    </div>
+    <Box minHeight="95vh">
+      <Box>
+        <div style={{background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,238,247,1) 0%, rgba(205,5,184,1) 75%)', 
+        zIndex: 10, height: '300px'
+      }}
+        />
+
+        <ChannelCard channelDetail={channelDetail} marginTop='-109px'/>
+      </Box>
+
+      <Box display='flex' p='2'>
+        <Box sx={{ mr:{ sm: '120px'}}}/>
+          <Videos videos={videos}/>
+
+      </Box>
+      
+    </Box>
   )
 }
 

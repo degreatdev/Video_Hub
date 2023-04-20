@@ -1,5 +1,4 @@
 {
-  "homepage": "http://degreatdev.github.io/dotech_learn/",
   "name": "dotech_learn",
   "version": "0.1.0",
   "dependencies": {
@@ -9,15 +8,15 @@
     "@mui/material": "^5.9.3",
     "axios": "^0.27.2",
     "react": "^18.2.0",
+    "react-custom-scrollbar": "^1.0.0",
     "react-dom": "^18.2.0",
     "react-player": "^2.10.1",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-ui-forms": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
