@@ -46,7 +46,7 @@ const SearchBar = () => {
         </Box>
         
 
-        <IconButton type="submit" sx={{ p:'10px', color: 'red', ml: {xs: '150px', md: '380px', sm:'380px'}, mt: {md:'-55px', xs: '-22px'}}}>
+        <IconButton type="submit" sx={{ p:'10px', color: 'red', ml: {xs: '150px', md: '380px', sm:'380px'}, mt: {md:'-55px', xs: '-30px'}}}>
             <Search />
         </IconButton>
     </Paper>
