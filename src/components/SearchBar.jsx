@@ -35,7 +35,7 @@ const SearchBar = () => {
         
     }}
     >
-        <Box sx={{mt: {md:'8px', xs:'10px'}, width:{xs: '200px'}, ml:{xs: '-2px'}}}>
+        <Box sx={{mt: {md:'8px', xs:'10px'}, width:{xs: '200px'}, mr:{xs: '5px'}}}>
         <input 
         className= "search-bar"
         placeholder='Search...'
