@@ -35,7 +35,7 @@ const SearchBar = () => {
         
     }}
     >
-        <Box sx={{mt: {md:'8px', xs:'10px'}}}>
+        <Box sx={{mt: {md:'8px', xs:'10px'}, width:{xs: '200px'}, ml:{xs: '-2px'}}}>
         <input 
         className= "search-bar"
         placeholder='Search...'
@@ -46,7 +46,7 @@ const SearchBar = () => {
         </Box>
         
 
-        <IconButton type="submit" sx={{ p:'10px', color: 'red', ml: {xs: '150px', md: '380px', sm:'380px'}, mt: {md:'-55px', xs: '-23px'}}}>
+        <IconButton type="submit" sx={{ p:'10px', color: 'red', ml: {xs: '150px', md: '380px', sm:'380px'}, mt: {md:'-55px', xs: '-22px'}}}>
             <Search />
         </IconButton>
     </Paper>
