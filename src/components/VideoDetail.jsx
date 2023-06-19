@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { Typography, Box, Stack} from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
+import { Button } from '@mui/material';
 
 
 import {Videos, Loader} from './';
@@ -40,7 +41,8 @@ const VideoDetail = () => {
         <Box flex={1}>
             <Box sx={{ width: '100%', position: 'sticky',top: '86px'}}>
               <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`}
-              className="react-player" controls/>
+              className="react-player" controls
+              />
               <Typography color='#fff' variant='h5' fontWeight='bold' p={2}>
                 {title}
               </Typography>
@@ -64,6 +66,21 @@ const VideoDetail = () => {
                   </Typography>
                 </Stack>
               </Stack>
+
+              {/*A download button for the video playing on the ReactPlayer component
+              The Button redirects to the www.yout.com platform when clicked, and with the video ID the video is fetched */}
+              <Stack> 
+              <Button onClick={() => { window.open(`https://www.yout.com/watch?v=${id}`);}}> 
+                <Box sx={{ width: '100%', backgroundColor:'#FC1503', height:'50px'}} justifyContent="center" alignItems="center" display='flex'>
+                
+                  <Typography variant={{ sm:'subtitle1', xs:'subtitle2', md: 'h5', fontWeight:'bold'}} color='#fff'>
+                    Download
+                  </Typography>
+                </Box>
+                </Button>
+              </Stack>
+              {/*The redirection button ends here!!!*/}
+
             </Box>
         </Box>
 
